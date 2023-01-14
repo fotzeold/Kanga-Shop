@@ -1,0 +1,19 @@
+.main__slider{
+	position: relative;
+	top: -18px;
+	.slide{
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.slick-dots{
+		bottom: 5px;
+		li{
+			width: 25px;
+			button:before{
+				font-size: 12px;
+			} 
+		}
+	}
+}

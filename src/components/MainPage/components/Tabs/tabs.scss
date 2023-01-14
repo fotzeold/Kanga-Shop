@@ -1,0 +1,103 @@
+.tabs{
+	&__row{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tabs__buttons{
+		.t__button{
+			cursor: pointer;
+			width: 30%;
+			height: 60px;
+			background-color: #EBEBEB;
+			text-align: center;
+			position: relative;
+
+			span{
+				font-weight: 600;
+				font-size: 28px;
+				line-height: 56px;
+			}
+
+			&::after, &::before{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 0px;
+				height: 0px;
+				top: 0;
+			}
+		}
+
+		.t-btn-1{
+			&::after{
+				right: -30px;
+				border-top: 30px solid transparent;
+				border-left: 30px solid #EBEBEB;
+				border-bottom: 30px solid transparent;
+			}
+		}
+		.t-btn-2{
+			position: relative;
+			z-index: 1;
+				
+			span{
+				position: relative;
+				z-index: 1;
+			}
+			
+			&::after, &::before{
+				width: 100%;
+				background-color: #EBEBEB;
+				height: 60px;
+			}
+				
+			&::after{
+				-webkit-transform: skew(-45deg);
+				-moz-transform: skew(-45deg);
+				position: absolute;
+				top: 0px;
+				  -o-transform: skew(-45deg);
+			}	
+
+			&::before{
+				-webkit-transform: skew(45deg);
+				-moz-transform: skew(45deg);
+				  -o-transform: skew(45deg);
+			}
+		}
+		.t-btn-3{
+			&::after{
+				left: -30px;
+				border-top: 30px solid transparent;
+				border-right: 30px solid #EBEBEB;
+				border-bottom: 30px solid transparent;
+			}
+		}
+
+		.t__button:hover span{
+				color: #fff;
+		}
+
+		.t-btn-1:hover{
+			background-color: #FF0000;
+			&::after{
+				border-left: 30px solid #FF0000;
+			}
+		}
+
+		.t-btn-2:hover{
+			background-color: #FFB800;
+			&::after, &::before {
+				background-color: #FFB800;
+			}
+		}
+
+		.t-btn-3:hover{
+			background-color: #FF5C00;
+			&::after{
+				border-right: 30px solid #FF5C00;
+			}
+		}
+	}
+}
