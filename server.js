@@ -2,11 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const Movie = require('./models/category');
+const cors = require('cors');
+
+app.use(cors());
 
 const PORT = 4000;
 const URL = 'mongodb+srv://forzeold:zerx1907@cluster0.pdi2tqy.mongodb.net/moviebox?retryWrites=true&w=majority';
-
-const data = [];
 
 mongoose.set('strictQuery', true);
 
