@@ -99,3 +99,12 @@
 		}
 	}
 }
+
+
+@media all and (max-width: 1024px) {
+	.product{
+		.product__row{
+			display: block;
+		}
+	}
+}

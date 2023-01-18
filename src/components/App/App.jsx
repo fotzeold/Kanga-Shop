@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import MainPage from "../MainPage/MainPage";
 import ConditionsPage from "../СonditionsPage/Conditions";
 import Basket from "../Basket/Basket";
@@ -14,6 +15,7 @@ const App = () => {
 					<Route path="/condition" element={<ConditionsPage />}></Route>
 				</Route>
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	)
 }
