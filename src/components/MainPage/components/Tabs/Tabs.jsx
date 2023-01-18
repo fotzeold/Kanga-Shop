@@ -1,43 +1,57 @@
 import { useState } from 'react';
+import ProductCard from '../../../ProductCard/ProductCard';
 
 import './tabs.scss';
 
-const Tabs = () => {
-	const [tab, setTab] = useState(2);
+const Tabs = (props) => {
+	const [tab, setTab] = useState(1);
+	const { dataBase } = props;
 
 	const renderTab = () => {
 		switch (tab) {
 			case 1:
-				return (<View1 />)
+				return (<View1 dataBase={dataBase} />)
 			case 2:
-				return (<View2 />)
+				return (<View2 dataBase={dataBase} />)
 			case 3:
-				return (<View3 />)
+				return (<View3 dataBase={dataBase} />)
 			default:
 				break;
 		}
 	}
 
+	const toggler = (num) => {
+		setTab(num);
+		const btns = document.querySelectorAll('.t__button');
+		btns.forEach(e => e.classList.remove('active'));
+		btns[num - 1].classList.add('active');
+	}
 
 	return (
 		<div className="tabs">
 			<div className="tabs__buttons">
 				<div className="tabs__row">
 					<div
-						className="t__button t-btn-1"
-						onClick={() => setTab(1)}
+						className={`t__button t-btn-1 active`}
+						onClick={() => {
+							toggler(1);
+						}}
 					>
 						<span>Товар місяця</span>
 					</div>
 					<div
-						className="t__button t-btn-2"
-						onClick={() => setTab(2)}
+						className={`t__button t-btn-2`}
+						onClick={() => {
+							toggler(2);
+						}}
 					>
 						<span>Хіти продажів</span>
 					</div>
 					<div
-						className="t__button t-btn-3"
-						onClick={() => setTab(3)}
+						className={`t__button t-btn-3`}
+						onClick={() => {
+							toggler(3);
+						}}
 					>
 						<span>Акції</span>
 					</div>
@@ -50,28 +64,40 @@ const Tabs = () => {
 	)
 }
 
-const View1 = () => {
-	return (
-		<>
-			wdfwf
-		</>
-	)
+const View1 = (props) => {
+	const { dataBase } = props;
+
+	if (dataBase) {
+		return (
+			<div className="tab-1 tab">
+				<ProductCard dataBase={dataBase} />
+			</div>
+		)
+	}
 }
 
-const View2 = () => {
-	return (
-		<>
-			wdfwfew
-		</>
-	)
+const View2 = (props) => {
+	const { dataBase } = props;
+
+	if (dataBase) {
+		return (
+			<>
+				<div>{dataBase[1].name}</div>
+			</>
+		)
+	}
 }
 
-const View3 = () => {
-	return (
-		<>
-			sdfsfrhrthrthsf
-		</>
-	)
+const View3 = (props) => {
+	const { dataBase } = props;
+
+	if (dataBase) {
+		return (
+			<>
+				<div>{dataBase[0].clothes[0].name}</div>
+			</>
+		)
+	}
 }
 
 export default Tabs;

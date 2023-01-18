@@ -17,7 +17,7 @@ const MainPage = () => {
 		<main>
 			<div className="container">
 				<MainSlider />
-				<Tabs />
+				<Tabs dataBase={dataBase} />
 			</div>
 		</main>
 	)

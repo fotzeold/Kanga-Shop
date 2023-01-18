@@ -1,4 +1,6 @@
 import './header.scss';
+
+import { Outlet, Link } from "react-router-dom";
 import basket from '../../assets/icons/bagget.png';
 import olx from '../../assets/icons/Olx.png';
 import inst from '../../assets/icons/Instagram.png';
@@ -37,9 +39,9 @@ const Header = () => {
 							}></div>
 						</div>
 						<div className="header__logo">
-							<a href=''>
+							<Link to="/">
 								Kanga.shop
-							</a>
+							</Link>
 						</div>
 						<div className="header__basket">
 							<figure>
@@ -51,32 +53,32 @@ const Header = () => {
 					<div className="header__nav">
 						<nav>
 							<ul>
-								<li><a href="">Головна</a></li>
+								<li><Link to="/">Головна</Link></li>
 								<li className='dropdown'>
 									<a onClick={() => toggleClassActive('.dropdown__content')}>Меню <span>⥥</span></a>
 								</li>
-								<li><a href="">Контакти</a></li>
-								<li><a href="">Соц.мережі</a></li>
-								<li><a href="">Оплата</a></li>
+								<li><Link to="/">Контакти</Link></li>
+								<li><Link to="/">Соц.мережі</Link></li>
+								<li><Link to="/condition">Оплата</Link></li>
 							</ul>
 						</nav>
 					</div>
 					<div className="dropdown__content">
 						<div className="dropdown__content-wrapper">
 							<ul>
-								<li><a href="">Акції</a></li>
-								<li><a href="">Чоловічий одяг</a></li>
-								<li><a href="">Сукні</a></li>
-								<li><a href="">Спортивні костюми</a></li>
-								<li><a href="">Штани та спідниці</a></li>
-								<li><a href="">Футболки</a></li>
+								<li><Link to="/">Акції</Link></li>
+								<li><Link to="/">Чоловічий одяг</Link></li>
+								<li><Link to="/">Сукні</Link></li>
+								<li><Link to="/">Спортивні костюми</Link></li>
+								<li><Link to="/">Штани та спідниці</Link></li>
+								<li><Link to="/">Футболки</Link></li>
 							</ul>
 							<ul>
-								<li><a href="">Шорти</a></li>
-								<li><a href="">Верхній одяг</a></li>
-								<li><a href="">Светри</a></li>
-								<li><a href="">Піжами</a></li>
-								<li><a href="">Нижня білизна</a></li>
+								<li><Link to="/">Шорти</Link></li>
+								<li><Link to="/">Верхній одяг</Link></li>
+								<li><Link to="/">Светри</Link></li>
+								<li><Link to="/">Піжами</Link></li>
+								<li><Link to="/">Нижня білизна</Link></li>
 								<li className='last-li' ><a href="">Sale</a></li>
 							</ul>
 						</div>
@@ -84,9 +86,9 @@ const Header = () => {
 						<div className="dropdown__footer">
 							<div className="dropdown-nav">
 								<ul>
-									<li><a href="">Головна</a></li>
-									<li><a href="">Відгуки</a></li>
-									<li><a href="">Способи оплати</a></li>
+									<li><Link to="/">Головна</Link></li>
+									<li><Link to="/">Відгуки</Link></li>
+									<li><Link to="/condition">Способи оплати</Link></li>
 								</ul>
 							</div>
 							<div className="dropdown__contacts-title">
@@ -108,6 +110,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
+			<Outlet />
 		</header >
 	)
 }
