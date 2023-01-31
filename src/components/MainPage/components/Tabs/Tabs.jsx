@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import ProductCard from '../../../ProductCard/ProductCard';
+import ProductHead from '../../../ProductHead/ProductHead';
+import ProductSlider from '../../../ProductSlider/ProductSlider';
 
 import './tabs.scss';
 
@@ -70,7 +71,7 @@ const View1 = (props) => {
 	if (dataBase) {
 		return (
 			<div className="tab-1 tab">
-				<ProductCard dataBase={dataBase} />
+				<ProductHead dataBase={dataBase} />
 			</div>
 		)
 	}
@@ -81,9 +82,9 @@ const View2 = (props) => {
 
 	if (dataBase) {
 		return (
-			<>
-				<div>{dataBase[1].name}</div>
-			</>
+			<div className="tab-2 tab">
+				<ProductSlider dataBase={dataBase} />
+			</div>
 		)
 	}
 }
