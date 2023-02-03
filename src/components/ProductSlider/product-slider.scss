@@ -1,0 +1,30 @@
+.product__slider{
+
+	.slick-list{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+
+	.slick-prev{
+		left: 0;
+		top: 45%;
+		z-index: 1;
+		&::before{
+			content: '\2770';
+			display: block;
+			font-size: 50px;
+			color: rgb(114, 114, 114);
+		}
+	}
+	.slick-next{
+		z-index: 5;
+		right: 0;
+		&::before{
+			content: '\2771';
+			display: block;
+			font-size: 50px;
+			color: rgb(114, 114, 114);
+		}
+	}
+}

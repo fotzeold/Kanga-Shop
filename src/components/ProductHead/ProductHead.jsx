@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Formik, Field, Form } from 'formik';
 
+import Slider from "react-slick";
+import "../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import './product-head.scss';
 
 const ProductHead = (props) => {
@@ -9,7 +12,7 @@ const ProductHead = (props) => {
 	const [added, setAdded] = useState(null);
 
 	const { dataBase } = props;
-	const { name, photos, price, color, size } = dataBase[2].clothes[3];
+	const { name, photos, price, color, size } = dataBase[3].clothes[2];
 
 	const addActiveClass = (selector, index) => {
 		const checkBoxes = document.querySelectorAll(selector);
@@ -17,7 +20,14 @@ const ProductHead = (props) => {
 		checkBoxes[index].classList.add('active');
 	}
 
-
+	const settings = {
+		dots: true,
+		arrows: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		cssEase: "linear",
+	};
 
 	return (
 		<div className="product">
@@ -49,8 +59,11 @@ const ProductHead = (props) => {
 
 								<div className="product__slider">
 									<div className="product__active-slide">
+										<span className="active-slide__prev"></span>
 										<img src={photos[mainImg]} alt="" width={'400px'} height={'500px'} />
+										<span className="active-slide__next"></span>
 									</div>
+
 									<div className="product__slides">
 										{
 											photos.map((img, i) => {
@@ -59,7 +72,7 @@ const ProductHead = (props) => {
 														<img
 															src={img}
 															width={'90px'}
-															height={'120px'}
+															height={'122px'}
 															onClick={() => setMainImg(i)}
 														/>
 													</div>
@@ -67,6 +80,8 @@ const ProductHead = (props) => {
 											})
 										}
 									</div>
+
+
 								</div>
 								<div className="product__content">
 									<a href="" className='product__title'><h5>{name}</h5></a><br />

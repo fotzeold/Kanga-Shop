@@ -80,10 +80,22 @@ const View1 = (props) => {
 const View2 = (props) => {
 	const { dataBase } = props;
 
+	const hotProduct = () => {
+		const hots = [];
+		dataBase.forEach(category => {
+			category.clothes.forEach(clothe => {
+				if (clothe.markHot) {
+					hots.push(clothe)
+				}
+			})
+		})
+		return hots;
+	}
+
 	if (dataBase) {
 		return (
 			<div className="tab-2 tab">
-				<ProductSlider dataBase={dataBase} />
+				<ProductSlider dataBase={hotProduct()} />
 			</div>
 		)
 	}
@@ -92,11 +104,23 @@ const View2 = (props) => {
 const View3 = (props) => {
 	const { dataBase } = props;
 
+	const promoProduct = () => {
+		const promo = [];
+		dataBase.forEach(category => {
+			category.clothes.forEach(clothe => {
+				if (clothe.markSale != 0) {
+					promo.push(clothe)
+				}
+			})
+		})
+		return promo;
+	}
+
 	if (dataBase) {
 		return (
-			<>
-				<div>{dataBase[0].clothes[0].name}</div>
-			</>
+			<div className="tab-3 tab">
+				<ProductSlider dataBase={promoProduct()} />
+			</div>
 		)
 	}
 }

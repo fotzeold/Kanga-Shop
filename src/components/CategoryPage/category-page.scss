@@ -78,33 +78,5 @@ section.category{
 			column-gap: 20px;
 			row-gap: 55px;
 		}
-		a{
-			padding: 10px;
-			color: black;
-			display: block;
-			width: 230px;
-			height: 440px;
-			margin: 0 auto;
-			text-decoration: none;
-			&:hover{
-				box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), -1px -1px 1px rgba(0, 0, 0, 0.25);
-			}
-			span{
-				font-size: 25px;
-				font-weight: 600;
-			}
-			h5{
-				font-size: 20px;
-				font-weight: normal;
-				margin: 0;
-				line-height: 28px;
-				display: -webkit-box;
-				-webkit-box-orient: vertical;  
-				-webkit-line-clamp: 2;
-				overflow: hidden;
-				height: 55px;
-				margin-bottom: 15px;
-			}
-		}
 	}
 }

@@ -38,7 +38,7 @@ const categorySchema = new Schema({
 		markDay: { type: Boolean },
 		markNew: { type: Boolean },
 		markHot: { type: Boolean },
-		markSale: { type: Boolean },
+		markSale: { type: Number },
 		season: { type: String },
 		type: { type: String },
 		rate: { type: Number },

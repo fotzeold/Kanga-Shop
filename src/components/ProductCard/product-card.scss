@@ -1,5 +1,6 @@
 .product__card{
 	a{
+		position: relative;
 		padding: 10px;
 		color: black;
 		display: block;
@@ -10,9 +11,40 @@
 		&:hover{
 			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), -1px -1px 1px rgba(0, 0, 0, 0.25);
 		}
+		.markers{
+			position: absolute;
+			top: 4%;
+			left: 7%;
+			color: white;
+			.markSale, .markHot{
+				text-align: center;
+				height: 25px;
+				border-radius: 25px;
+			}
+
+			.markHot{
+				background-color: #FFB800;
+				width: 130px;
+				margin-bottom: 5px;
+			}
+
+			.markSale{
+				background-color: #FF5C00;
+				width: 50px;
+			}
+		}
 		span{
 			font-size: 25px;
 			font-weight: 600;
+		}
+		.after-price{
+			color: red;
+		}
+		.before-price{
+			font-size: 20px;
+			color: grey;
+			position: absolute;
+			right: 20%;
 		}
 		h5{
 			font-size: 20px;

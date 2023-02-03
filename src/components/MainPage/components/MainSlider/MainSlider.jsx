@@ -4,8 +4,10 @@ import './main-slider.scss';
 import "../../../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../../../node_modules/slick-carousel/slick/slick-theme.css";
 
-import firstSlideImgM from "../../../../assets/mainSlider/1.png"
-import secondSlideImgM from "../../../../assets/mainSlider/2.png"
+import IMG_1 from "../../../../assets/mainSlider/Sport.png"
+import IMG_2 from "../../../../assets/mainSlider/Home.png"
+import IMG_3 from "../../../../assets/mainSlider/Jackets.png"
+import IMG_4 from "../../../../assets/mainSlider/Dress.png"
 
 const MainSlider = () => {
 	const settings = {
@@ -14,9 +16,9 @@ const MainSlider = () => {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: false,
+		autoplay: true,
 		speed: 500,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
 		cssEase: "linear",
 		responsive: [
 			{
@@ -33,22 +35,16 @@ const MainSlider = () => {
 			<div>
 				<Slider {...settings}>
 					<div className="slide">
-						<img src={firstSlideImgM} alt="" />
+						<img src={IMG_1} alt="Sport" />
 					</div>
 					<div className="slide">
-						<img src={secondSlideImgM} alt="" />
+						<img src={IMG_2} alt="Home" />
 					</div>
 					<div className="slide">
-						<h3>3</h3>
+						<img src={IMG_3} alt="Jackets" />
 					</div>
 					<div className="slide">
-						<h3>4</h3>
-					</div>
-					<div className="slide">
-						<h3>5</h3>
-					</div>
-					<div className="slide">
-						<h3>6</h3>
+						<img src={IMG_4} alt="Dress" />
 					</div>
 				</Slider>
 			</div>

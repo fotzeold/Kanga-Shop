@@ -76,7 +76,7 @@
 			}
 		}
 
-		.t__button:hover span{
+		.t__button:hover, .t__button.active span{
 				color: #fff;
 		}
 
