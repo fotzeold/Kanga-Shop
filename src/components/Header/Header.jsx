@@ -1,3 +1,5 @@
+import RoutingToTop from '../../hooks/RoutingToTop';
+
 import './header.scss';
 
 import { Outlet, Link } from "react-router-dom";
@@ -8,6 +10,8 @@ import telg from '../../assets/icons/Telegram.png';
 import face from '../../assets/icons/Facebook.png';
 
 const Header = () => {
+	RoutingToTop()
+
 	const back = document.querySelector('.dropdown__background');
 
 	const toggleClassActive = (selector) => {
@@ -78,7 +82,7 @@ const Header = () => {
 									<li className='dropdown'>
 										<a onClick={() => openDropDown()}>Меню <span>⥥</span></a>
 									</li>
-									<li><Link onClick={() => closeDropDown()} to="/">Контакти</Link></li>
+									<li><a onClick={() => closeDropDown()} href="#yak-contact">Контакти</a></li>
 									<li><Link onClick={() => closeDropDown()} to="/">Соц.мережі</Link></li>
 									<li><Link onClick={() => closeDropDown()} to="/condition">Оплата</Link></li>
 								</ul>
@@ -99,6 +103,7 @@ const Header = () => {
 									<li><Link onClick={() => closeDropDown()} to={`/category/man-clothes`}>Чоловічий одяг</Link></li>
 									<li><Link onClick={() => closeDropDown()} to={`/category/shorts`}>Шорти</Link></li>
 									<li><Link onClick={() => closeDropDown()} to={`/category/t-shirts`}>Футболки</Link></li>
+									<li><Link onClick={() => closeDropDown()} to={`/category/pants`}>Штани</Link></li>
 									<li><Link onClick={() => closeDropDown()} to={`/category/sweaters`}>Светри</Link></li>
 									<li><Link onClick={() => closeDropDown()} to={`/category/under-dress`}>Спідниці</Link></li>
 									<li className='last-li' ><a onClick={() => closeDropDown()} href="">Акції</a></li>

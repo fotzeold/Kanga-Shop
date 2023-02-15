@@ -1,7 +1,9 @@
 import './category-page.scss';
 import ProductCard from '../ProductCard/ProductCard';
+import RoutingToTop from '../../hooks/RoutingToTop';
 
 const CategoryPage = (props) => {
+	RoutingToTop()
 
 	const dataClothes = props.dataCategory.clothes;
 

@@ -1,4 +1,8 @@
+import RoutingToTop from "../../hooks/RoutingToTop";
+
 const ConditionsPage = () => {
+	RoutingToTop()
+
 	return (
 		<main className='conditions'>
 			<div className="container">

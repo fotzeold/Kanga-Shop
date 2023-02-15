@@ -1,0 +1,31 @@
+.main-banner{
+	margin-bottom: 30px;
+	.banner{
+		position: relative;
+		.banner__text{
+			width: 450px;
+			height: 100px;
+			display: flex;
+			position: absolute;
+			top: 50%;
+			left: 32%;
+			transform: translate3d(-175px, -50px, 0);
+		}
+		.percent{
+			display: block;
+			font-size: 80px;
+			line-height: 88px;
+			color: white;
+			text-shadow: 2px 2px 2px red;
+		}
+		.text{
+			display: block;
+			line-height: 37px;
+			font-size: 30px;
+			margin-left: 20px;
+			margin-top: 8px;
+			font-weight: 600;
+			color: rgb(84, 83, 83);
+		}
+	}
+}

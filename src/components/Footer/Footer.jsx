@@ -17,7 +17,7 @@ const Footer = () => {
 							<li>пн-сб: з 9:00 до 20:00</li>
 						</ul>
 					</div>
-					<div className="footer__social">
+					<div id="yak-contact" className="footer__social">
 						<span>Ми в соц. мережах:</span>
 						<ul>
 							<li><a href=""><img src={olx} alt="" /></a></li>
