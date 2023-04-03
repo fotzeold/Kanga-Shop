@@ -12,7 +12,7 @@ const ProductHead = (props) => {
 	const [added, setAdded] = useState(null);
 
 	const { dataBase } = props;
-	const { name, photos, price, color, size } = dataBase[3].clothes[2];
+	const { name, photos, price, color, size } = dataBase[1].clothes[0];
 
 	const addActiveClass = (selector, index) => {
 		const checkBoxes = document.querySelectorAll(selector);

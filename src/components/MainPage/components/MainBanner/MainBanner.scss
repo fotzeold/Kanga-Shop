@@ -2,6 +2,12 @@
 	margin-bottom: 30px;
 	.banner{
 		position: relative;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
 		.banner__text{
 			width: 450px;
 			height: 100px;
@@ -20,12 +26,98 @@
 		}
 		.text{
 			display: block;
-			line-height: 37px;
 			font-size: 30px;
 			margin-left: 20px;
+			line-height: 37px;
 			margin-top: 8px;
 			font-weight: 600;
 			color: rgb(84, 83, 83);
+		}
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.main-banner .banner{
+		.percent{
+			font-size: 60px;
+		}
+	}
+}
+
+@media all and (max-width: 890px) {
+	.main-banner .banner{
+		img{
+			width: 890px;
+		}
+		.percent{
+			font-size: 60px;
+		}
+		.text{
+			font-size: 22px;
+		}
+		.banner__text{
+			left: 37%;
+		}
+	}
+}
+
+@media all and (max-width: 820px) {
+	.main-banner .banner{
+		.banner__text{
+			left: 42%;
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+	.main-banner .banner{
+		.banner__text{
+			width: 350px;
+			left: 50%;
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.main-banner .banner{
+		.banner__text{
+			width: 350px;
+			left: 57%;
+		}
+	}
+}
+
+@media all and (max-width: 540px) {
+	.main-banner .banner{
+		.banner__text{
+			width: 350px;
+			left: auto;
+			right: 0;
+			transform: translate3d(0, -50px, 0);
+		}
+	}
+}
+
+@media all and (max-width: 450px) {
+	.main-banner .banner{
+		img{
+			transform: translateX(-100px);
+		}
+	}
+}
+
+@media all and (max-width: 370px) {
+	.main-banner .banner{
+		.percent{
+			font-size: 44px;
+		}
+		.text{
+			line-height: 22px;
+			margin-top: 23px;
+			font-size: 16px;
+		}
+		.banner__text{
+			width: 280px;
 		}
 	}
 }

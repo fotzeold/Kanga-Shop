@@ -6,7 +6,7 @@ const MainBanner = () => {
 	return (
 		<div className="main-banner">
 			<div className="banner">
-				<img src={banner} alt="" width="1366px" />
+				<img src={banner} alt=""/>
 				<div className="banner__text">
 					<span className='percent'>-10%</span>
 					<span className='text'>на кожну третю <br /> одиницю товару!</span>

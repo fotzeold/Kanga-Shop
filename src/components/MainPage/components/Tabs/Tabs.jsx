@@ -21,21 +21,49 @@ const Tabs = (props) => {
 		}
 	}
 
-	const toggler = (num) => {
-		setTab(num);
+	const togglerActive = (num) => {
 		const btns = document.querySelectorAll('.t__button');
 		btns.forEach(e => e.classList.remove('active'));
 		btns[num - 1].classList.add('active');
+	}
+
+	const togglerBtn = (num) => {
+		togglerActive(num);
+		setTab(num)
+	}
+
+	const togglerBtnNext = (tab) => {
+		if (tab == 3) {
+			setTab(1)
+			togglerActive(1)
+		} else {
+			setTab(tab => tab + 1)
+			togglerActive(tab + 1)
+		}
+	}
+
+	const togglerBtnPrev = (tab) => {
+		if (tab == 1) {
+			setTab(3)
+			togglerActive(3)
+		} else {
+			setTab(tab => tab - 1)
+			togglerActive(tab - 1)
+		}
 	}
 
 	return (
 		<div className="tabs">
 			<div className="tabs__buttons">
 				<div className="tabs__row">
+					<button
+						onClick={() => togglerBtnPrev(tab)}
+						className='tabs-toggler toggler-prev'
+					>&#129064;</button>
 					<div
 						className={`t__button t-btn-1 active`}
 						onClick={() => {
-							toggler(1);
+							togglerBtn(1);
 						}}
 					>
 						<span>Товар місяця</span>
@@ -43,7 +71,7 @@ const Tabs = (props) => {
 					<div
 						className={`t__button t-btn-2`}
 						onClick={() => {
-							toggler(2);
+							togglerBtn(2);
 						}}
 					>
 						<span>Хіти продажів</span>
@@ -51,11 +79,15 @@ const Tabs = (props) => {
 					<div
 						className={`t__button t-btn-3`}
 						onClick={() => {
-							toggler(3);
+							togglerBtn(3);
 						}}
 					>
 						<span>Акції</span>
 					</div>
+					<button
+						className='tabs-toggler toggler-next'
+						onClick={() => togglerBtnNext(tab)}
+					>&#129058;</button>
 				</div>
 			</div>
 			<div className="tabs__content">

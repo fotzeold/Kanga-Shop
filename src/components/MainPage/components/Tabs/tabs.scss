@@ -6,6 +6,9 @@
 	}
 
 	.tabs__buttons{
+		.tabs-toggler{
+			display: none;
+		}
 		.t__button{
 			cursor: pointer;
 			width: 30%;
@@ -88,6 +91,7 @@
 		}
 
 		.t-btn-2:hover, .t-btn-2.active{
+			background-color: #FFB800;
 			&::after, &::before {
 				background-color: #FFB800;
 			}
@@ -104,4 +108,60 @@
 
 .tab{
 	padding: 30px 0 30px 0 ;
+}
+
+@media all and (max-width: 768px) {
+	.tabs{
+		.tabs__buttons{	
+			margin-left: -20px;
+			margin-right: -20px;
+			.t__button{
+				width: 20%;
+				margin-left: 20px;
+				margin-right: 20px;
+ 					span{
+					font-size: 16px;
+				}
+			}
+			.t-btn-1.active, .t-btn-2.active, .t-btn-3.active{
+				width: 60%;
+				span{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 640px) {
+	.tabs{
+		.tabs__buttons{	
+			.tabs-toggler{
+				display: block;
+			}
+			margin-left: 0px;
+			margin-right: 0px;
+			.t__button{
+				width: 50%;
+				display: none;
+				margin-left: 20px;
+				margin-right: 20px;
+ 					span{
+					font-size: 22px;
+				}
+			}
+			.t-btn-1, .t-btn-2, .t-btn-3{
+				&::before{
+					display: none;
+				}
+				&::after{
+					display: none;
+				}
+			}
+			.t-btn-1.active, .t-btn-2.active, .t-btn-3.active{
+				width: 50%;
+				display: block;
+			}
+		}
+	}
 }

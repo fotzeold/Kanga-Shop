@@ -1,13 +1,15 @@
 .main-categorys{
+	width: 100%;
 	&__wrapper{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: 12px;
+		align-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+		gap: 15px;
 	}
 
 	.category{
 		position: relative;
-		width: 330px;
+		max-width: 330px;
 		overflow: hidden;
 		height: 400px;
 		.category-link img{
@@ -41,3 +43,25 @@
 		}
 	}
 }
+
+@media all and (max-width: 575px) {
+	.main-categorys{
+		&__wrapper{
+			gap: 0;
+			row-gap: 10px;
+			grid-template-columns: 1fr;
+		}
+		.category{
+			margin: 0 auto;
+		}
+	}
+}
+
+@media all and (max-width: 353px) {
+	.main-categorys{
+		.category{
+			max-width: 280px;
+		}
+	}
+}
+

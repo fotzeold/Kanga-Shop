@@ -37,7 +37,7 @@ footer{
 		position: relative;
 		height: 240px;
 	}
-	span{
+	.footer__social-title{
 		display: none;
 	}
 	.footer__social{
@@ -49,14 +49,10 @@ footer{
 
 @media all and (max-width: 490px) {
 	footer{
-		position: relative;
 		height: auto;
 	}
 	.footer__contacts-wrapper, .footer__nav{
 		width: 205px;
-	}
-	span{
-		display: none;
 	}
 	.footer__social{
 		position: static;  

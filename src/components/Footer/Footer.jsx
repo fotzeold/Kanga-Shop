@@ -18,7 +18,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div id="yak-contact" className="footer__social">
-						<span>Ми в соц. мережах:</span>
+						<span className='footer__social-title'>Ми в соц. мережах:</span>
 						<ul>
 							<li><a href=""><img src={olx} alt="" /></a></li>
 							<li><a href=""><img src={inst} alt="" /></a></li>
